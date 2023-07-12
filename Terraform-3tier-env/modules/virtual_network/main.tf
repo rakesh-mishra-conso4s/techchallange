@@ -9,10 +9,10 @@ variable "virtual_network_address" {
 }
 
 output "virtual_network_name" {
-  value = azurerm_virtual_network.example.name
+  value = azurerm_virtual_network.testchalnge.name
 }
 
-resource "azurerm_virtual_network" "example" {
+resource "azurerm_virtual_network" "testchalnge" {
   name                = var.virtual_network_name
   address_space       = var.virtual_network_address
   location            = var.resource_group_location

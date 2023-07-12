@@ -23,7 +23,11 @@ variable "allowed_source" {
   type        = string
 }
 
-resource "azurerm_network_security_group" "example" {
+output "nsg_id" {
+  value = azurerm_network_security_group.testchalnge.id
+}
+
+resource "azurerm_network_security_group" "testchalnge" {
   name                = var.nsg_name
   location            = var.location
   resource_group_name = var.resource_group_name
